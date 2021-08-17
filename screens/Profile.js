@@ -9,6 +9,7 @@ const Profile = ({ route }) => {
   
   const [state, setState] = useState({ 
     fname:'', lname: '', birth: '', number: '', Address: '', city: '', started_at: ''})
+   
   
   const [currentDate, setCurrentDate] = useState('');
   
@@ -54,12 +55,10 @@ const Profile = ({ route }) => {
           setState({Address:responseJson[0].Address});
           setState({city:responseJson[0].city});
           setState({started_at:responseJson[0].started_at});
-            
         }).catch((error) => {
             console.error(error);
     });
  }
-  
 
   return (
    <SafeAreaView style={{flex:1}}>
@@ -72,42 +71,37 @@ const Profile = ({ route }) => {
            title="View Profile"
           onPress={this.view}
         />
-
-        <TextInput
-         style={styles.tstyle}
-         value={state.fname}
-        />
+        
+      {state.fname!= null
+      ?<Text>{state.fname}
+        </Text>
+        :null }
         
 
-        <TextInput
-         style={styles.tstyle}
-         value={state.lname}
-        />
+       
+         
         
-        <TextInput 
-         style={styles.tstyle}
-         value={state.birth}
-         />
-       
-        <TextInput
-         style={styles.tstyle}
-         value={state.number}
-         />
-       
-        <TextInput 
-         style={styles.tstyle}
-         value={state.Address}
-        />
-       
-        <TextInput 
-         style={styles.tstyle}
-         value={state.city}
-         />
+        <Text
+         style={styles.tstyle}>{state.birth}
+        </Text>
         
-        <TextInput 
-         style={styles.tstyle}
-         value={state.started_at}
-         />
+       
+        <Text
+         style={styles.tstyle}>{state.number}
+        </Text>
+         
+       
+        <Text 
+         style={styles.tstyle}>{state.Address}
+        </Text>
+       
+        <Text
+         style={styles.tstyle}>{state.city}
+        </Text>
+        
+        <Text
+         style={styles.tstyle}>{state.started_at}
+        </Text>
         
       
 

@@ -131,6 +131,7 @@ return (
             onPress={() =>navigation.navigate('Profile',{ email:Email }, {key: 'Home'})}
             title="Profile"
              />
+             
          <Button 
           style={{justifyContent: 'space-between' ,padding: 30}}
             onPress={() =>navigation.navigate('LeaveApply')}

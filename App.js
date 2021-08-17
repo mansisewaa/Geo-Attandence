@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 
 import login from "./screens/login";
-import Example from './example';
+//import Example from './example';
 import Home from "./screens/Home";
 import Leave from "./screens/Leave";
 import Profile from "./screens/Profile";

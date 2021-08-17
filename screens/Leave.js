@@ -5,36 +5,17 @@ import { Card } from 'react-native-paper';
 
 
 const Leave = ({navigation}) => {
+
    
 
     return (
-        <SafeAreaView style={{flex:1}}>
-      <View style={styles.container}>
-       <Card>
-          <Button style={styles.btn}
-            title="Profile"
-            onPress={() =>navigation.navigate('Profile')}
-          />
-        </Card>
-       
-       <Card style={{marginTop: 15}} >
-        <Button style={styles.btn}
-            title="Apply Leave"
-            onPress={() =>navigation.navigate('LeaveApply')}
-          />
-        </Card>
-
-        <Card style={{marginTop: 15}} >
-        <Button style={styles.btn}
-            title="Profile"
-            onPress={() =>navigation.navigate('Profile')}
-          />
-        </Card>
-
-        
-      </View>
+     <SafeAreaView style={{flex:1}}>
+        <View style={styles.container}>
+          <Text style={styles.text}> Leave</Text>
+       </View> 
+    
       
-    </SafeAreaView>
+     </SafeAreaView>
   );
 };
 
